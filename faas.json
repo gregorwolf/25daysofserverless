@@ -1,0 +1,32 @@
+{
+	"project": "serverless25-day1-dreidel",
+	"version": "0.0.1",
+	"runtime": "nodejs8",
+	"library": "./lib",
+	"secrets": {},
+	"configs": {},
+	"functions": {
+		"spindreidel": {
+			"module": "index.js",
+			"handler": "handler",
+			"secrets": [],
+			"configs": []
+		},
+		"githubwebhook": {
+			"module": "githubwebhook.js",
+			"handler": "handler",
+			"secrets": [],
+			"configs": []
+		}
+	},
+	"triggers": {
+		"spindreidel": {
+			"type": "HTTP",
+			"function": "spindreidel"
+		},
+		"githubwebhook": {
+			"type": "HTTP",
+			"function": "githubwebhook"
+		}
+	}
+}
