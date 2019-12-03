@@ -1,0 +1,13 @@
+### Send GitHub push
+POST http://localhost:8080/githubwebhook/
+Content-Type: application/json
+
+{
+  "commits": [
+    {
+      "added": [
+        "test.txt"
+      ]
+    }
+  ]
+}

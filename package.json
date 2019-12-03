@@ -1,5 +1,9 @@
 {
 	"dependencies": {
 		"node-uuid": ">=1.4.7"
+	},
+	"scripts": {
+	  "start:local": "faas-sdk run",
+	  "watch": "nodemon --exec faas-sdk run"
 	}
 }
