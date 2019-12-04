@@ -3,7 +3,11 @@
 		"node-uuid": ">=1.4.7"
 	},
 	"scripts": {
-	  "start:local": "faas-sdk run",
-	  "watch": "nodemon --exec faas-sdk run"
+		"start:local": "faas-sdk run",
+		"watch": "nodemon --exec faas-sdk run"
+	},
+	"devDependencies": {
+		"@sap/faas": "^0.6.3",
+		"nodemon": "^2.0.1"
 	}
 }
