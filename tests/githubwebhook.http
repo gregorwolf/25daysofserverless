@@ -17,6 +17,27 @@ Content-Type: application/json
   ]
 }
 
+### Delete Image
+DELETE https://rcpduskkh8xe9q03cture-backend-srv.cfapps.eu10.hana.ondemand.com/media/Pictures('8947778c698bed6d3da7dd81b670848580974e718c796575f1f64db2557d5ef4')
+
+### Create Image
+POST https://rcpduskkh8xe9q03cture-backend-srv.cfapps.eu10.hana.ondemand.com/media/Pictures
+Accept: application/json
+Content-Type: application/json
+
+{ 
+  "ID": "8947778c698bed6d3da7dd81b670848580974e718c796575f1f64db2557d5ef4"
+}
+
+### Upload Image
+PUT https://rcpduskkh8xe9q03cture-backend-srv.cfapps.eu10.hana.ondemand.com/media/Pictures('8947778c698bed6d3da7dd81b670848580974e718c796575f1f64db2557d5ef4')/content
+Content-Type: image/png
+
+< ./Test.png
+
+### Read Image
+GET https://rcpduskkh8xe9q03cture-backend-srv.cfapps.eu10.hana.ondemand.com/media/Pictures('8947778c698bed6d3da7dd81b670848580974e718c796575f1f64db2557d5ef4')/content
+
 ### Send GitHub push with png
 POST http://localhost:8080/githubwebhook/
 Content-Type: application/json
