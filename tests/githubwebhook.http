@@ -16,8 +16,12 @@ Content-Type: application/json
     }
   ]
 }
+
+### Read Images
+GET https://rcpduskkh8xe9q03cture-backend-srv.cfapps.eu10.hana.ondemand.com/media/Pictures
+
 ### Read Image
-GET https://rcpduskkh8xe9q03cture-backend-srv.cfapps.eu10.hana.ondemand.com/media/Pictures('8947778c698bed6d3da7dd81b670848580974e718c796575f1f64db2557d5ef4')/content
+GET https://rcpduskkh8xe9q03cture-backend-srv.cfapps.eu10.hana.ondemand.com/media/Pictures('458f65ab820f2f21f0ae3fc744b75053df363648dbb1dcabf15f0d8014e910f4')/content
 
 ### Delete Image
 DELETE https://rcpduskkh8xe9q03cture-backend-srv.cfapps.eu10.hana.ondemand.com/media/Pictures('8947778c698bed6d3da7dd81b670848580974e718c796575f1f64db2557d5ef4')
@@ -39,6 +43,32 @@ PUT https://rcpduskkh8xe9q03cture-backend-srv.cfapps.eu10.hana.ondemand.com/medi
 Content-Type: image/png
 
 < ./Test.png
+
+### Read Picture
+GET https://rcpduskkh8xe9q03cture-backend-srv.cfapps.eu10.hana.ondemand.com/media/Pictures('8947778c698bed6d3da7dd81b670848580974e718c796575f1f64db2557d5ef4')/content
+
+### Delete Picture
+DELETE https://rcpduskkh8xe9q03cture-backend-srv.cfapps.eu10.hana.ondemand.com/media/Pictures('8947778c698bed6d3da7dd81b670848580974e718c796575f1f64db2557d5ef4')
+
+
+### Send GitHub push to production
+POST 	https://f983bf4f-59c6-4523-a939-1b9caa795140.ingress.live.faas-live.shoot.live.k8s-hana.ondemand.com/githubwebhook/
+Content-Type: application/json
+
+{
+  "commits": [
+    {
+      "added": [
+        "images/Test.png"
+      ],
+      "removed": [
+      ],
+      "modified": [
+        "README.md"
+      ]
+    }
+  ]
+}
 
 ### Send GitHub push with png
 POST http://localhost:8080/githubwebhook/
